@@ -24,7 +24,7 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <250>;
+    tapping-term-ms = <220>;
 };
 
 / {
@@ -100,10 +100,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp TILDE              &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp BACKSLASH    &trans  &trans  &trans  &trans  &trans
-        &kp QUESTION           &kp DOLLAR     &kp PERCENT     &kp CARET             &kp PIPE         &trans  &trans  &trans  &trans  &trans
-&trans  &kp RIGHT_PARENTHESIS  &kp EXCL       &kp AT          &kp HASH              &none            &trans  &trans  &trans  &trans  &trans  &trans
-                                              &kp LEFT_BRACE  &kp RIGHT_BRACE       &none            &trans  &trans  &trans
+        &kp TILDE              &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp BACKSLASH     &trans  &trans  &trans  &trans  &trans
+        &kp QUESTION           &kp DOLLAR     &kp PERCENT     &kp CARET             &kp PIPE          &trans  &trans  &trans  &trans  &trans
+&trans  &kp RIGHT_PARENTHESIS  &kp EXCL       &kp AT          &kp HASH              &kp UNDERSCORE    &trans  &trans  &trans  &trans  &trans  &trans
+                                              &kp LEFT_BRACE  &kp RIGHT_BRACE       &none             &trans  &trans  &trans
             >;
         };
 
