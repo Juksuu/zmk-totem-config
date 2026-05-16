@@ -30,6 +30,43 @@
 / {
     combos { compatible = "zmk,combos"; };
 
+    behaviors {
+        td_Q_1: td_Q_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_Q_1";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp NUMBER_1>;
+        };
+
+        td_W_2: td_W_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_W_2";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp NUMBER_2>;
+        };
+
+        td_E_3: td_E_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_E_3";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp NUMBER_3>;
+        };
+
+        td_R_4: td_R_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_R_4";
+            #binding-cells = <0>;
+            bindings = <&kp R>, <&kp NUMBER_4>;
+        };
+
+        td_T_5: td_T_5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_T_5";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&kp NUMBER_5>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -78,7 +115,7 @@
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &none       &none     &none          &none        &none
         &trans  &trans  &trans  &trans  &trans    &kp LEFT    &kp DOWN  &kp UP_ARROW   &kp RIGHT    &kp CAPS
-&trans  &trans  &trans  &trans  &trans  &trans    &kp INSERT  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp INSERT  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &tog 6
                         &trans  &trans  &trans    &trans      &trans    &trans
             >;
         };
@@ -150,6 +187,16 @@
         &trans  &trans  &trans  &trans  &trans    &bt BT_CLR      &bt BT_SEL 3  &bt BT_SEL 4  &trans        &sys_reset
 &trans  &trans  &trans  &trans  &trans  &trans    &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &trans
                         &trans  &trans  &trans    &trans          &trans        &trans
+            >;
+        };
+
+        game {
+            label = "GAME";
+            bindings = <
+        &td_Q_1  &td_W_2  &td_E_3     &td_R_4    &td_T_5    &kp Y      &kp U            &kp I         &kp O    &kp P
+        &kp A    &kp S    &kp D       &kp F      &kp G      &kp H      &kp J            &kp K         &kp L    &mt RMETA SEMI
+&tog 6  &kp Z    &kp X    &kp C       &kp V      &kp B      &kp N      &kp M            &kp COMMA     &kp DOT  &kp SLASH       &kp APOS
+                          &kp ESCAPE  &kp SPACE  &kp TAB    &lt 2 RET  &lt 3 BACKSPACE  &lt 4 DELETE
             >;
         };
     };
